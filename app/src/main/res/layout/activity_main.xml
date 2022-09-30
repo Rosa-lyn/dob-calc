@@ -60,5 +60,53 @@
         android:backgroundTint="@color/text_purple"
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="30/09/2022"
+        android:textColor="@color/blue_primary"
+        android:textColorHighlight="#BDE0FE"
+        android:textColorHint="#254441"
+        android:textColorLink="#062726"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="selected date"
+        android:textColor="@color/text_purple"
+        android:textColorHighlight="#BDE0FE"
+        android:textColorHint="#254441"
+        android:textColorLink="#062726"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="1440"
+        android:textColor="@color/blue_primary"
+        android:textColorHighlight="#BDE0FE"
+        android:textColorHint="#254441"
+        android:textColorLink="#062726"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="minutes since date"
+        android:textColor="@color/text_purple"
+        android:textColorHighlight="#BDE0FE"
+        android:textColorHint="#254441"
+        android:textColorLink="#062726"
+        android:textSize="18sp"
+        />
 </LinearLayout>

@@ -11,5 +11,8 @@
     <color name="backgroundColor">#F2E9E4</color>
     <color name="text_purple">#CDB4DB</color>
     <color name="blue_secondary">#BDE0FE</color>
+    <color name="grey_primary">#C9ADA7</color>
+    <color name="main_pink">#FFAFCC</color>
+    <color name="pink_variant">#FF8FB8</color>
 
 </resources>
