@@ -13,6 +13,7 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     private var tvSelectedDate : TextView? = null
+    private var tvAgeInMinutes : TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val btnDatePicker : Button = findViewById(R.id.btnDatePicker)
 
         tvSelectedDate = findViewById(R.id.tvSelectedDate)
+        tvAgeInMinutes = findViewById(R.id.tvAgeInMinutes)
         btnDatePicker.setOnClickListener {
             clickDatePicker()
         }
@@ -32,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         val month = myCalendar.get(Calendar.MONTH)
         val day = myCalendar.get(Calendar.DAY_OF_MONTH)
 
-        DatePickerDialog(
+        val dpd = DatePickerDialog(
             this,
             // here we can also remove `DatePickerDialog.OnDateSetListener`
             DatePickerDialog.OnDateSetListener { _, selectedYear, selectedMonth, selectedDayOfMonth ->
@@ -51,12 +53,27 @@ class MainActivity : AppCompatActivity() {
 
                 // converting date into our selected format
                 val convertedDate = sdf.parse(selectedDate)
+
+                // if let convertedDate = convertedDate
+                convertedDate?.let {
+                    val selectedDateInMinutes = convertedDate.time / 60000
+                    val currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
+                    currentDate?.let {
+                        val currentDateInMinutes = currentDate.time / 60000
+                        val differenceInMinutes = currentDateInMinutes - selectedDateInMinutes
+                        tvAgeInMinutes?.text = differenceInMinutes.toString()
+                    }
+                }
+
+
             },
             year,
             month,
             day
-        ).show()
+        )
 
+        dpd.datePicker.maxDate = System.currentTimeMillis() - 86_400_000
+        dpd.show()
 
     }
 }
