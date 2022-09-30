@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Age in Minutes</string>
+    <string name="calculate_your">CALCULATE YOUR</string>
+    <string name="age">AGE</string>
+    <string name="in_minutes">IN MINUTES</string>
+    <string name="select_date">SELECT DATE</string>
+    <string name="initial_date">30/09/2022</string>
+    <string name="selected_date">selected date</string>
+    <string name="initial_minutes_since_date">0</string>
+    <string name="minutes_since_date">minutes since date</string>
 </resources>
